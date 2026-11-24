@@ -59,7 +59,7 @@ docker compose exec -T localstack awslocal s3 rb s3://demo-bucket-aws
 
 ## Script demonstrativ complet
 
-Pornește LocalStack, execută operațiunile CRUD de mai sus și curăță resursele:
+Pornește LocalStack, execută operațiunile S3 de mai sus și curăță resursele:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\demo.ps1

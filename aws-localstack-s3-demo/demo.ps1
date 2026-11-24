@@ -20,8 +20,8 @@ Write-Host "Waiting for LocalStack..."
 $ready = $false
 for ($i = 0; $i -lt 90; $i++) {
     try {
-        $health = Invoke-RestMethod -Uri "http://localhost:4566/_localstack/health" -TimeoutSec 2
-        if ($health.services.s3 -eq "available") {
+        $health = Invoke-RestMethod -Uri "http://127.0.0.1:4566/_localstack/health" -TimeoutSec 2
+        if ($health.services.s3 -in @("available", "running")) {
             $ready = $true
             break
         }
